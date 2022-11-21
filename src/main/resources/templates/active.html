@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="https://static.nowcoder.com/images/logo_87_87.png"/>
+  <title>Yolo-激活账号</title>
+</head>
+<body>
+<div>
+  <p>
+    <b><span th:text="${email}"></span></b>, 您好!
+  </p>
+  <p>
+    您正在注册Yolo, 这是一封激活邮件, 请点击,
+<!--    <a th:href="@{${url}}" target="_blank" href="#"></a>,-->
+    <a style="text-decoration: none;color: #3a8ee6" href="#" th:href="@{${url}}" target="_bank">
+      <strong>激活您的Yolo账号!</strong>
+    </a>
+
+  </p>
+</div>
+</body>
+</html>

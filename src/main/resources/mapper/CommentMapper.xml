@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sicnu.yolo.mapper.CommentMapper">
+    <select id="selectCommentByIds" resultType="com.sicnu.yolo.entity.Comment">
+        select * from comment
+        where status = 0 and entity_type = #{type}
+        and entity_id in
+        <foreach collection="ids"  item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+</mapper>
